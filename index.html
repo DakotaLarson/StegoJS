@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <title>StegoJS</title>
     <link rel="stylesheet" href="master.css" type="text/css"/>
+    <script src="main.js" async defer></script>
+    <script src="seedrandom.min.js" async defer></script>
 </head>
 <body>
-
+<form>
+    <input type="file" id="file" accept="image/*"/>
+    <label for="file">
+        <span>Select File</span><br/>
+        <span id="filename"></span>
+    </label><br/>
+    <textarea cols="40" rows="10" placeholder="Message" class="msgInput"></textarea><br/>
+    <input type="text" placeholder="Password (Optional)" class="passInput"/><br/>
+    <span class="err"></span><br/>
+    <button type="button" class="encBtn">Encode</button>
+    <button type="button" class="decBtn">Decode</button>
+</form>
 </body>
 </html>
