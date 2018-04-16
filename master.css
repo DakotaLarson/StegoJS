@@ -33,7 +33,7 @@ input[type="text"]{
     background: #404040;
     outline: none;
     border: solid 1px white;
-    margin: 25px 0;
+    margin-top: 25px;
     width: 300px;
     font: 15px sans-serif;
 }
@@ -46,6 +46,7 @@ button{
     font-size: 25px;
     margin: 0 10px;
 }
+
 .err{
     font: 15px sans-serif;
     color: red;
