@@ -10,7 +10,7 @@ form{
 
 }
 input[type="file"]{
-    display: none;
+    color: white;
 }
 label[for="file"]{
     color: white;
@@ -50,4 +50,7 @@ button{
 .err{
     font: 15px sans-serif;
     color: red;
+}
+.option{
+    display: inline-block;
 }

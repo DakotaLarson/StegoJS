@@ -60,41 +60,41 @@
     decBtn.addEventListener('click', function(){
 
     });
-    function ab2str(buf) {
-        return String.fromCharCode.apply(null, new Uint16Array(buf));
-    }
-    function str2ab(str) {
-        let buf = new ArrayBuffer(str.length*2); // 2 bytes for each char
-        let bufView = new Uint16Array(buf);
-        for (let i=0, strLen=str.length; i < strLen; i++) {
-            bufView[i] = str.charCodeAt(i);
-        }
-        return buf;
-    }
-    let rawKey = 'test key';
-    let data = 'test data';
-    window.crypto.subtle.importKey('raw', str2ab(rawKey),{
-        name: 'AES-GCM'
-    }, true, ['encrypt', 'decrypt']).then(function(key){
-        console.log(key);
-        window.crypto.subtle.exportKey('raw', key).then(function(keyData){
-            console.log(keyData);
-        });
-        encrypt(key, data);
-    });
-    function encrypt(key, data){
-        let iv = window.crypto.getRandomValues(new Uint8Array(12));
-        window.crypto.subtle.encrypt({
-            name: 'AES-GCM',
-            iv: iv
-        }, key, str2ab(data)).then(function(encrypted){
-            console.log(encrypted);
-        });
-    }
-    function decrypt(key, data, iv){
-        window.subtle.decrypt({
-            name: 'AES-GCM',
-            iv: iv
-        })
-    }
+    // function ab2str(buf) {
+    //     return String.fromCharCode.apply(null, new Uint16Array(buf));
+    // }
+    // function str2ab(str) {
+    //     let buf = new ArrayBuffer(str.length*2); // 2 bytes for each char
+    //     let bufView = new Uint16Array(buf);
+    //     for (let i=0, strLen=str.length; i < strLen; i++) {
+    //         bufView[i] = str.charCodeAt(i);
+    //     }
+    //     return buf;
+    // }
+    // let rawKey = 'test key';
+    // let data = 'test data';
+    // window.crypto.subtle.importKey('raw', str2ab(rawKey),{
+    //     name: 'AES-GCM'
+    // }, true, ['encrypt', 'decrypt']).then(function(key){
+    //     console.log(key);
+    //     window.crypto.subtle.exportKey('raw', key).then(function(keyData){
+    //         console.log(keyData);
+    //     });
+    //     encrypt(key, data);
+    // });
+    // function encrypt(key, data){
+    //     let iv = window.crypto.getRandomValues(new Uint8Array(12));
+    //     window.crypto.subtle.encrypt({
+    //         name: 'AES-GCM',
+    //         iv: iv
+    //     }, key, str2ab(data)).then(function(encrypted){
+    //         console.log(encrypted);
+    //     });
+    // }
+    // function decrypt(key, data, iv){
+    //     window.subtle.decrypt({
+    //         name: 'AES-GCM',
+    //         iv: iv
+    //     })
+    // }
 }());

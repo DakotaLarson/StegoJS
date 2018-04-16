@@ -10,15 +10,25 @@
 <body>
 <form>
     <input type="file" id="file" accept="image/*"/>
-    <label for="file">
-        <span>Select File</span><br/>
-        <span id="filename"></span>
-    </label><br/>
-    <textarea cols="40" rows="10" placeholder="Message" class="msgInput"></textarea><br/>
-    <input type="text" placeholder="Password (Optional)" class="passInput"/><br/>
+    <!--<label for="file">-->
+        <!--<span>Select File</span><br/>-->
+        <!--<span id="filename"></span>-->
+    <!--</label>-->
+    <br/>
+    <div class="option-parent">
+        <span class="option">
+            <textarea cols="40" rows="10" placeholder="Message" class="msg-input"></textarea><br/>
+            <input type="text" placeholder="Password (Optional)" class="enc-pass-input"/><br/>
+            <button type="button" class="enc-btn">Encode</button>
+        </span>
+        <span class="option">
+            <input type="text" placeholder="Password (Optional)" class="dec-pass-input"/><br/>
+            <button type="button" class="dec-btn">Decode</button>
+        </span>
+    </div>
+
     <span class="err"></span><br/>
-    <button type="button" class="encBtn">Encode</button>
-    <button type="button" class="decBtn">Decode</button>
+
 </form>
 </body>
 </html>
