@@ -40,17 +40,6 @@ p {
     text-align: left;
 }
 
-.step {
-    text-transform: uppercase;
-    position: absolute;
-    margin-top: -50px;
-    margin-left: -50px;
-    background-color: lightgray;
-    color: dimgray;
-    padding: 20px;
-    font-size: 20px;
-}
-
 .left {
     width: 45%;
     float: left;

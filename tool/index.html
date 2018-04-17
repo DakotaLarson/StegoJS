@@ -9,14 +9,12 @@
 <body>
     <h1>StegoJS</h1>
     <div id='main' class='section dark'>
-        <div class='step'>Choose an image</div>
         <img id='preview' class='preview hide' />
         <div class='sectionbody'>
             <input type='file' id='file' />
         </div>
     </div>
     <div id='choose' class='section dark hide'>
-        <div class='step'>What do you want to do?</div>
         <div class='sectionbody'>
             <div class='left'>
                 <textarea id='message' class='message' maxlength='1000'
@@ -33,7 +31,6 @@
         </div>
     </div>
     <div id='reveal' class='section dark hide'>
-        <div class='step'>Hidden message</div>
         <div id='messageDecoded' class='sectionbody'></div>
     </div>
     <canvas id='canvas' class='hide'></canvas>

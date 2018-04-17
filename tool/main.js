@@ -195,11 +195,6 @@ let getNextLocation = function(history, hash, total) {
         } else if ((loc + 1) % 4 === 0) { //Check for if value relates to alpha
             loc++;
         } else {
-            let aLoc = loc;
-            while ((aLoc + 1) % 4 !== 0) {
-                aLoc++;
-            }
-            if()
             history.push(loc);
             return loc;
         }
